@@ -24,9 +24,20 @@ Entorno de integración local del SENA: proyecto Docker Compose `srd-migration-s
 
 Antes de la QA, `chat-reverb` exigía una imagen global `srd-chat`, no disponible en la reconstrucción del SENA. Se corrigió en SRD-Docker-Infra usando el mismo contexto/Dockerfile de compilación de Chat: [commit 72bab141](https://github.com/jsgh1/SRD-Docker-Infra/commit/72bab1415d20e02603b655a6b135e0f58e815a97). Además del smoke test local anterior, la compilación e inicialización limpia en CI se verificaron en el Run #39980062621.
 
+## Comprobación local de aislamiento MySQL — APROBADA
+
+**Fecha:** 2026-10-23. **Entorno:** estación de trabajo SENA, `C:\Users\Aprendiz\Desktop\SRD-Migration-SENA-2026-10-23\workspace`. **Proyecto Docker:** `srd-migration-sena`.
+
+- Compose `config` verificó el nombre de proyecto y el volumen existente `srd-migration-sena_mysql_data`.
+- Los **26 contenedores** listados estaban en ejecución. Servicios Laravel, planificadores, antivirus, MySQL y Mailpit con healthchecks reportaron `healthy`; el contenedor web y el antivirus-updater estaban en ejecución (no reportan healthcheck en esa salida).
+- Los accesos `http://127.0.0.1:8080/` y `http://127.0.0.1:8025/` devolvieron **HTTP 200**.
+- Se ejecutó en cada microservicio el comprobador de solo lectura `tools/check-mysql-isolation.php`, que verifica la base propia y prueba acceso a la tabla `migrations` de las otras diez bases.
+- **11/11 microservicios PASS; 110/110 intentos de lectura cruzada entre esquemas denegados; 0 fallos.**
+- Los microservicios comprobados fueron: gateway, identity, configuration, records, audit, files, calendar, notifications, treasury, inventory y chat.
+- Esta prueba acredita **aislamiento de credenciales MySQL entre microservicios**, **NO** equivale al aislamiento de filas/datos entre dos juntas de acción comunal dentro de un mismo microservicio (tenant isolation). El aislamiento entre juntas sigue pendiente de una prueba integrada de API/navegador con dos organizaciones.
+
 ## Pendientes honestamente identificados
 
-- **Aislamiento vivo MySQL:** ejecutar `tools/check-mysql-isolation.php` mediante Compose `-p srd-migration-sena` para verificar que cada usuario MySQL puede consultar su propia base y **no** las otras diez.
 - **Flujos end-to-end en navegador:** pruebas Playwright de login, registros CRUD, roles, carpeta/archivos, calendario, chat WebSocket con suscripciones autenticadas, y aislamiento entre dos juntas. Las suites existentes crean fixtures; ejecutarlas únicamente en un entorno de pruebas separado o controlado; nunca sobre datos reales sin un plan aprobado.
 - **Correspondencia contra snapshot original:** cotejo documental `SOURCE_MAPPING.csv` contra las cinco extracciones. El archivo referenciado en las descripciones iniciales de PR no estaba presente en esos cinco árboles Git durante esta revisión.
 - **Aprobación de QA humana:** revisar resultados y decidir integración; las CI unitarias y smoke tests no equivalen a aprobación integral de producción.

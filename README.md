@@ -48,7 +48,8 @@ Cada documento dispone de una versión PDF y su correspondiente archivo Word edi
 Se conserva el catálogo académico anterior y se añade el informe de React Native, APK Android, matriz de paridad web–móvil, pruebas, instalación y guion de demostración:
 
 - [Informe de mejora móvil y APK](Entregables/MEJORA-MOBILE-REACTNATIVE-APK-2026-10-27.md)
-- [Evidencia visual del emulador](Entregables/Evidencias/mobile-debug-final.png)
+- [Tablero autenticado tras actualizar el APK](Entregables/Evidencias/mobile-after-apk.png)
+- [Evidencias de Personas, Agenda, invitaciones, Inventario y Tesorería](Entregables/MEJORA-MOBILE-REACTNATIVE-APK-2026-10-27.md#evidencia-visual)
 - APK debug local: `SRD-Frontend/apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk` (SHA-256 incluido en el informe).
 
 ### ¿Qué documento consultar?

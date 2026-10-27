@@ -108,4 +108,12 @@ El APK fue firmado con una llave debug local. La instalación normal en un telé
 
 ## Publicación
 
-La rama prevista es `feat/mobile-native-paridad-apk-20261027` en cada repositorio modificado. Añadir aquí los SHA de commit y enlaces a los PR después de publicarlos. No se debe fusionar a `dev` hasta que las comprobaciones obligatorias y la aprobación/CI del repositorio estén satisfechas.
+Se publicaron estos commits en `feat/mobile-native-paridad-apk-20261027`:
+
+| Repositorio | Commit | Pull request |
+| --- | --- | --- |
+| SRD-Frontend | `86d5f2a` | [PR #4](https://github.com/jsgh1/SRD-Frontend/pull/4) |
+| SRD-Database | `b61b6a7` | [PR #5](https://github.com/jsgh1/SRD-Database/pull/5) |
+| SRD-Docs | `cb465c8` | [PR #4](https://github.com/jsgh1/SRD-Docs/pull/4) |
+
+Los tres PR están dirigidos a `dev`. No se fusionaron: la aprobación humana y los controles obligatorios del repositorio deben completarse antes de integrar.

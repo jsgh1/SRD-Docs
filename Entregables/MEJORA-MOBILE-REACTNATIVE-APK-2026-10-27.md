@@ -20,7 +20,7 @@ Las acciones se ejecutaron en el APK instalado, conectado a `http://10.0.2.2:808
 | --- | --- |
 | Login y MFA | Contraseña sintética aceptada, desafío MFA, código local aceptado y tablero “Hola, Prueba Admin” cargado desde el Gateway. |
 | Personas | Listado con 8 personas sintéticas, búsqueda `Celia` con 1 resultado y apertura del detalle. |
-| Agenda | Eventos reales del Gateway para la semana mostrada; se abrió un evento con estado, horario y lugar. |
+| Agenda | Eventos servidos por el Gateway con datos sintéticos para la semana mostrada; se abrió un evento con estado, horario y lugar. |
 | Invitaciones | Se creó un evento futuro ficticio para el usuario de prueba; apareció como pendiente, se abrió su detalle y se respondió **Aceptar**. La app mostró “Asistencia confirmada”. |
 | Inventario | Listado de bienes, búsqueda por código con un resultado y ficha con existencia actual e historial. |
 | Tesorería | Saldo inicial, ingresos, egresos y saldo actual; historial de tres asientos y detalle de comprobante. |

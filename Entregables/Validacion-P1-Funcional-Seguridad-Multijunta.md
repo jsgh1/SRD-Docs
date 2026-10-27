@@ -1,7 +1,7 @@
-﻿# SRD P1 — validación funcional, seguridad y aislamiento multi-junta
+# SRD P1 — validación funcional, seguridad y aislamiento multi-junta
 
-Fecha: 27 de octubre de 2026  
-Rama: `feat/mobile-native-paridad-apk-20261027`  
+Fecha: 27 de octubre de 2026
+Rama: `feat/mobile-native-paridad-apk-20261027`
 Entorno: Compose aislado `srd-mobile-showcase-20261027`, Gateway `http://localhost:8080`, Mailpit local `http://localhost:8025`, organizaciones sintéticas `srd-e2e-a` y `srd-e2e-b`. No se usó producción ni se modificaron datos reales.
 
 ## Resultado ejecutivo

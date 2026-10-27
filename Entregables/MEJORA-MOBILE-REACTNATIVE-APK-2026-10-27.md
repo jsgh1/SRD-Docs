@@ -94,12 +94,12 @@ Los PR se mantienen abiertos; no se fusionó ninguno mientras la aceptación fun
 
 | Repositorio | PR | Estado observado |
 | --- | --- | --- |
-| [SRD-Frontend #4](https://github.com/jsgh1/SRD-Frontend/pull/4) | Rama `feat/mobile-native-paridad-apk-20261027` | Abierto; `web-build` pasó antes de estos commits y se volverá a ejecutar al publicar la actualización. |
-| [SRD-Database #4](https://github.com/jsgh1/SRD-Database/pull/4) | `fix/d8-shell-line-endings` | Abierto; añade `.gitattributes` con `*.sh text eol=lf`. |
-| [SRD-Database #5](https://github.com/jsgh1/SRD-Database/pull/5) | Rama `feat/mobile-native-paridad-apk-20261027` | Abierto; su regla específica para `initialize-services.sh` queda cubierta por la regla global de PR #4. Existe solapamiento funcional; no se fusionó ni se cerró ninguno. |
-| [SRD-Docs #4](https://github.com/jsgh1/SRD-Docs/pull/4) | Rama `feat/mobile-native-paridad-apk-20261027` | Abierto; se actualizará con este informe y capturas. |
+| [SRD-Frontend #4](https://github.com/jsgh1/SRD-Frontend/pull/4) | Rama `feat/mobile-native-paridad-apk-20261027` | Abierto; `web-build` pasó después de la actualización. |
+| [SRD-Database #4](https://github.com/jsgh1/SRD-Database/pull/4) | `fix/d8-shell-line-endings` | Abierto; `migration-syntax` pasó; añade `.gitattributes` con `*.sh text eol=lf`. |
+| [SRD-Database #5](https://github.com/jsgh1/SRD-Database/pull/5) | Rama `feat/mobile-native-paridad-apk-20261027` | Abierto; `migration-syntax` pasó; su regla específica para `initialize-services.sh` queda cubierta por la regla global de PR #4. Existe solapamiento funcional; no se fusionó ni se cerró ninguno. |
+| [SRD-Docs #4](https://github.com/jsgh1/SRD-Docs/pull/4) | Rama `feat/mobile-native-paridad-apk-20261027` | Abierto; sin checks configurados al momento de la consulta. |
 
-Los repositorios modificados en esta entrega son Frontend y Docs. Backend, Database y Docker-Infra no recibieron cambios locales en esta continuación; se revisará que sus worktrees sigan limpios antes de cerrar la tarea.
+Los repositorios modificados en esta continuación son Frontend y Docs. Los cinco worktrees están limpios después de publicar; Backend, Database y Docker-Infra no recibieron cambios locales en esta continuación.
 
 ## Guion de demostración
 

@@ -43,6 +43,16 @@ Cada documento dispone de una versión PDF y su correspondiente archivo Word edi
 
 **Total:** **12 PDF + 12 Word = 24 archivos originales conservados**.
 
+## Entrega técnica móvil (27 de octubre de 2026)
+
+Se conserva el catálogo académico anterior y se añade el informe de React Native, APK Android, matriz de paridad web–móvil, pruebas, instalación y guion de demostración:
+
+- [Informe de mejora móvil y APK](Entregables/MEJORA-MOBILE-REACTNATIVE-APK-2026-10-27.md)
+- [Validación P1 funcional, seguridad y aislamiento multi-junta](Entregables/Validacion-P1-Funcional-Seguridad-Multijunta.md)
+- [Tablero autenticado tras actualizar el APK](Entregables/Evidencias/mobile-after-apk.png)
+- [Evidencias de Personas, Agenda, invitaciones, Inventario y Tesorería](Entregables/MEJORA-MOBILE-REACTNATIVE-APK-2026-10-27.md#evidencia-visual)
+- APK debug local: `SRD-Frontend/apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk` (SHA-256 incluido en el informe).
+
 ### ¿Qué documento consultar?
 
 - **Especificación de Requisitos (SRS):** necesidades del sistema, requisitos y alcance.
